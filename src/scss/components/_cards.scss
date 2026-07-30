@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------
+[ cards ]*/
+
+/* card-category */
+
+.card-category {
+    --bs-card-spacer-y: 20px;
+    --bs-card-spacer-x: 20px;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-inner-border-radius: 0;
+    --bs-card-bg: #EAEDFB;
+
+    .card-heading {
+        margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .card-heading {
+            margin-bottom: 40px;
+        }
+    }
+}

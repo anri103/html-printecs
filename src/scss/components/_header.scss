@@ -1,0 +1,140 @@
+/*------------------------------------------------------------------
+[ header ]*/
+
+.header {
+    position: relative;
+
+    .header-row {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        > .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // Максимальная ширина
+
+    @include media-breakpoint-down(xl) {
+        &__desktop {
+            display: none;
+        }
+    }
+
+    // Минимальная ширина
+
+    @include media-breakpoint-up(xl) {
+        &__mobile {
+            display: none;
+        }
+
+        &__desktop {
+            .main-row {
+                min-height: 72px;
+            }
+        }
+    }
+}
+
+.header-desktop-absolute .header__desktop .main-row {
+    position: absolute;
+}
+
+/* header-widget */
+
+.header-widget {
+    &__logo {
+        flex-shrink: 0;
+
+        img {
+            width: auto;
+            height: 40px;
+        }
+    }
+
+    &__contacts {
+        --bs-link-color-rgb: 255, 255, 255;
+        --bs-link-hover-color-rgb: 255, 255, 255;
+
+        a {
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__sign-btn {
+            display: none;
+        }
+    }
+}
+
+/* primary-nav */
+
+.primary-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+
+        a {
+            position: relative;
+            display: block;
+            padding: 4px 16px;
+            color: #767B89;
+            font-size: 16px;
+            font-weight: 500;
+
+            &:hover,
+            &.active {
+                color: #050505;
+            }
+        }
+
+    }
+
+    @include media-breakpoint-up(xxl) {
+        li a {
+            padding: 6px 20px;
+            font-size: 18px;
+        }
+    }
+}
+
+/* mobile-nav */
+
+.mobile-navigation {
+    position: relative;
+}
+
+.mobile-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    a {
+        display: block;
+        color: #767B89;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    a.active {
+        color: #050505;
+    }
+}

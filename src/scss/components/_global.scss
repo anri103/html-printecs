@@ -1,0 +1,10 @@
+/*------------------------------------------------------------------
+[ global ]*/
+
+html { scroll-behavior: smooth; }
+
+// Максимальная ширина
+
+@include media-breakpoint-down(lg) {
+    .hide-on-mobile { display: none !important; }
+}

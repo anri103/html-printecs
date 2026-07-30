@@ -1,0 +1,47 @@
+/*------------------------------------------------------------------
+[ buttons ]*/
+
+.btn {
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 600;
+    --bs-btn-line-height: 1;
+    --bs-btn-border-width: 1px;
+    --bs-btn-disabled-opacity: 0.25;
+    --bs-btn-focus-box-shadow: none;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #FF8127;
+    --bs-btn-hover-border-color: #FF8127;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #EE741D;
+    --bs-btn-active-border-color: #EE741D;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #FF8127;
+    --bs-btn-disabled-border-color: #FF8127;
+}
+
+.btn-sm {
+    --bs-btn-padding-y: 0;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 500;
+    min-height: 48px;
+}
+
+// @include media-breakpoint-up(lg) {}

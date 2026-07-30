@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------
+[ swiper ]*/
+
+/* swiperTeamDesktop */
+
+.swiperTeamDesktop {
+    .swiper-slide {
+        width: 500px;
+        height: auto;
+    }
+
+    &.is-dragging .card {
+        pointer-events: none;
+    }
+
+
+    // .swiper-slide-active .card-team-desktop {
+    //     background: linear-gradient(180deg, #040308 45.87%, #452555 110.6%);
+    // }
+
+    .card-team-desktop {
+        cursor: pointer;
+    }
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+
+/* swiperTeamMobile */
+
+.swiperTeamMobile {
+    .swiper-slide {
+        width: 300px;
+        height: auto;
+
+        &.swiper-slide-active {
+            .team-member-position {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    }
+
+    .team-member-position {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 190px;
+        min-height: 52px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.6s ease;
+
+        > * {
+            color: #fff;
+            margin: 0;
+        }
+    }
+
+    .card-team-mobile {
+        flex: 1 1 auto;
+        height: 100%;
+    }
+
+    .btn-swiper-prev {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        z-index: 10;
+    }
+
+    .btn-swiper-next {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        z-index: 10;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
