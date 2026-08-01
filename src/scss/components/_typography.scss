@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6,
 .text-opacity-80 { --bs-text-opacity: 0.8; }
 
 // paragraph
-.text-box p:last-of-type { margin-bottom: 0; }
+.text-box p:last-of-type { margin-bottom: 0 !important; }
 
 // text-line-clamp
 .text-line-clamp-1 {

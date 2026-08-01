@@ -8,15 +8,17 @@
         margin-bottom: 32px;
     }
 
-    @include media-breakpoint-up(xl) {
-        &__header {
-            margin-bottom: 40px;
-        }
+    &__footer {
+        margin-top: 24px;
     }
 
-    @include media-breakpoint-up(xxl) {
+    @include media-breakpoint-up(xl) {
         &__header {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
+        }
+
+        &__footer {
+            margin-top: 60px;
         }
     }
 }
@@ -142,4 +144,82 @@
     --bs-link-color-rgb: var(--theme-white-rgb);
     --bs-breadcrumb-divider-color: var(--theme-white);
     --bs-breadcrumb-item-active-color: var(--theme-white);
+}
+
+/*------------------------------------------------------------------
+[ section-home-hero ]*/
+
+.section-home-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 32px 0 155px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1370px;
+        height: 100%;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
+
+    .hero-title {
+        max-width: 1090px;
+        font-size: clamp(2.375rem, 1.79rem + 2.92vw, 4.125rem);
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+        max-width: 600px;
+        font-size: clamp(1rem, 0.83rem + 0.83vw, 1.5rem);
+        line-height: 1.2;
+    }
+
+    .hero-features {
+        max-width: 1050px;
+        margin-top: 64px;
+    }
+
+    .hero-btns {
+        margin-top: 100px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        min-height: 960px;
+        padding: 200px 0 130px;
+
+        .hero-title {
+            margin-bottom: 24px;
+        }
+
+        .hero-btns {
+            margin-top: 32px;
+        }
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-home-clients ]*/
+
+.section-home-clients {
+    padding: 60px 0;
+
+    @include media-breakpoint-up(xl) {
+        padding: 140px 0;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-services ]*/
+
+.section-services {
+    padding: 40px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 140px;
+    }
 }

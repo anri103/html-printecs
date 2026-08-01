@@ -5,6 +5,10 @@ html { scroll-behavior: smooth; }
 
 // Максимальная ширина
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xl) {
+    body {
+        font-size: 0.875rem;
+    }
+
     .hide-on-mobile { display: none !important; }
 }

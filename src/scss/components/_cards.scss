@@ -3,22 +3,85 @@
 
 /* card-category */
 
-.card-category {
-    --bs-card-spacer-y: 20px;
-    --bs-card-spacer-x: 20px;
+// .card-category {
+//     --bs-card-spacer-y: 20px;
+//     --bs-card-spacer-x: 20px;
+//     --bs-card-border-width: 0;
+//     --bs-card-border-color: transparent;
+//     --bs-card-border-radius: var(--bs-border-radius);
+//     --bs-card-inner-border-radius: 0;
+//     --bs-card-bg: #EAEDFB;
+
+//     .card-heading {
+//         margin-bottom: 20px;
+//     }
+
+//     @include media-breakpoint-up(xl) {
+//         .card-heading {
+//             margin-bottom: 40px;
+//         }
+//     }
+// }
+
+/* card-service */
+
+.card-service {
+    --bs-card-spacer-y: 6px;
+    --bs-card-spacer-x: 6px;
     --bs-card-border-width: 0;
     --bs-card-border-color: transparent;
     --bs-card-border-radius: var(--bs-border-radius);
     --bs-card-inner-border-radius: 0;
-    --bs-card-bg: #EAEDFB;
+    --bs-card-bg: #F6F4F3;
 
-    .card-heading {
-        margin-bottom: 20px;
+    .card-thumb-wrapper {
+        height: 138px;
+        border-radius: calc(var(--bs-border-radius) - 2px);
+        margin-bottom: 12px;
+        background-color: #fff;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-title {
+        text-align: center;
+        font-size: clamp(0.75rem, 0.5rem + 1.25vw, 1.5rem);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .btn-primary {
+        --bs-btn-border-radius: var(--bs-border-radius-sm);
+        --bs-btn-font-size: 12px;
+        min-height: 25px;
     }
 
     @include media-breakpoint-up(xl) {
-        .card-heading {
-            margin-bottom: 40px;
+        --bs-card-spacer-y: 1rem;
+        --bs-card-spacer-x: 1rem;
+
+        .card-thumb-wrapper {
+            height: 340px;
+            margin-bottom: 32px;
+        }
+
+        .card-title {
+            margin-bottom: 32px;
+        }
+
+        .btn-primary {
+            --bs-btn-border-radius: var(--bs-border-radius);
+            --bs-btn-font-size: 20px;
+            min-height: 60px;
         }
     }
 }

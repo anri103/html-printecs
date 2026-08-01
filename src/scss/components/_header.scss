@@ -17,6 +17,11 @@
         }
     }
 
+    &__mobile {
+        padding-top: 32px;
+        padding-bottom: 20px;
+    }
+
     // Максимальная ширина
 
     @include media-breakpoint-down(xl) {
@@ -36,12 +41,12 @@
             .main-row {
                 min-height: 72px;
             }
+
+            .header-widget__logo {
+                margin-left: 8px;
+            }
         }
     }
-}
-
-.header-desktop-absolute .header__desktop .main-row {
-    position: absolute;
 }
 
 /* header-widget */
@@ -52,7 +57,7 @@
 
         img {
             width: auto;
-            height: 40px;
+            height: 38px;
         }
     }
 
@@ -92,22 +97,23 @@
             position: relative;
             display: block;
             padding: 4px 16px;
-            color: #767B89;
+            color: #fff;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400;
+            text-decoration: none;
 
             &:hover,
             &.active {
-                color: #050505;
+                color: var(--bs-primary);
             }
         }
 
     }
 
-    @include media-breakpoint-up(xxl) {
+    @include media-breakpoint-up(xl) {
         li a {
             padding: 6px 20px;
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 }
