@@ -1,0 +1,74 @@
+<section class="section section-home-features" style="background-image: url('assets/img/home/bg-features.jpg');">
+    <div class="bg-overlay"></div>
+
+    <div class="section__header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl">
+                    <div class="d-flex flex-column gap-5 gap-xl-7">
+                        <h2 class="section__title h1 fw-600 text-uppercase text-white text-center text-xl-start">Какие проблемы решаем</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__body">
+        <div class="container">
+            <div class="swiperFeatures-area position-relative">
+                <div class="swiper swiperFeatures">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            @@include('../cards/card-feature.html', {
+                                "title": "Экономия времени и&nbsp;нервов",
+                                "text": "Клиенту не нужно разбираться в технических тонкостях (вылеты под обрез, цветовые профиля, спуск полос). Типография принимает макеты в любом виде, сама проверяет и исправляет ошибки, не допуская брака в тираже."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-feature.html', {
+                                "title": "Гарантия цвета «как на макете»",
+                                "text": "Типография решает проблему несовпадения экранного и реального цвета. Клиент получает тираж с точным попаданием в фирменный цвет, без «зеленых лиц» на фото и без переплаты за перепечатку."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-feature.html', {
+                                "title": "Чистовая отделка «под ключ»",
+                                "text": "В одном месте делают резку, биговку, фальцовку, ламинацию, скругление углов, вырубку и т.д. Клиент заказывает готовый продукт (открытку, коробку, календарь, блокнот), а не стопку отпечатанных листов, которые надо доводить до ума."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-feature.html', {
+                                "title": "Печать сложных макетов без потери качества",
+                                "text": "Типография решает проблему «мелкий текст пропал», «тонкие линии порвались», «обратная сторона просвечивает». Клиент может смело использовать сложные шрифты, мелкие логотипы и плотные заливки."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-feature.html', {
+                                "title": "Защита тиража от внешних воздействий",
+                                "text": "Печать не сотрется в сумке, не отсыреет и не выгорит на солнце. Клиент получает визитки, ценники, меню, инструкции, которые выглядят опрятно спустя месяцы использования."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-feature.html', {
+                                "title": "Предсказуемый срок и качество тиража",
+                                "text": "Типография работает как надежный подрядчик: сдает заказ вовремя (без «завтра постараемся»), упаковывает готовую продукцию, берет на себя логистику. Клиент не гадает, когда приедет тираж и не испорчен ли он."
+                            })
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-swiper-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <path d="M29.5557 18.6668H7.77789M17.1112 9.3335L7.77789 18.6668L17.1112 28.0002" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button type="button" class="btn btn-secondary btn-swiper-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <path d="M7.77783 18.6667L29.5556 18.6667M20.2223 28L29.5556 18.6667L20.2223 9.33333" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>

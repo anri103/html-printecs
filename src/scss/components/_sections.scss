@@ -5,10 +5,16 @@
     position: relative;
 
     &__header {
+        position: relative;
         margin-bottom: 32px;
     }
 
+    &__body {
+        position: relative;
+    }
+
     &__footer {
+        position: relative;
         margin-top: 24px;
     }
 
@@ -221,5 +227,38 @@
 
     @include media-breakpoint-up(xl) {
         padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-home-features ]*/
+
+.section-home-features {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 115px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1280px;
+        height: 100%;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(255, 98, 1, 0.24) 100%);
+    }
+
+    .section__header {
+        margin-bottom: 32px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 140px 0 140px;
+
+        .section__header {
+            margin-bottom: 205px;
+        }
     }
 }

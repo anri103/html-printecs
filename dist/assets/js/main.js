@@ -36,6 +36,24 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
+        if (document.querySelector('.swiperFeatures')) {
+            new Swiper('.swiperFeatures', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiperFeatures-area .btn-swiper-next',
+                    prevEl: '.swiperFeatures-area .btn-swiper-prev',
+                },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                breakpoints: {
+                    768:  { slidesPerView: 2 },
+                    992:  { slidesPerView: 3 },
+                    1200: { slidesPerView: 4 },
+                },
+            });
+        }
+
         // if (document.querySelector('.swiperBlog')) {
         //     new Swiper('.swiperBlog', {
         //         slidesPerView: 1,
