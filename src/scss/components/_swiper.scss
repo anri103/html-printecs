@@ -94,3 +94,39 @@
         border-radius: var(--bs-border-radius);
     }
 }
+
+/* swiperTeam */
+
+.swiperTeam {
+    border-radius: var(--bs-border-radius-sm);
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .card-team-slide {
+        height: 100%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        border-radius: var(--bs-border-radius);
+    }
+}
+
+/* swiperBlog */
+
+.swiperBlog {
+    border-radius: var(--bs-border-radius-sm);
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .card-blog {
+        height: 100%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        border-radius: var(--bs-border-radius);
+    }
+}

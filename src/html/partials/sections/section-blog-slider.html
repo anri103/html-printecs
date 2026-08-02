@@ -1,0 +1,82 @@
+<section class="section section-blog-slider">
+
+    <div class="section__header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl">
+                    <div class="d-flex flex-column gap-5 gap-xl-7">
+                        <h2 class="section__title h1 fw-600 text-uppercase text-center text-xl-start">Блог</h2>
+                    </div>
+                </div>
+                <div class="col-xl-auto">
+                    <div class="d-flex align-items-center gap-6">
+                        <a href="#" class="btn btn-secondary hide-on-mobile">Смотреть все</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__body">
+        <div class="container">
+            <div class="swiperBlog-area position-relative">
+                <div class="swiper swiperBlog">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            @@include('../cards/card-blog.html', {
+                                "thumbURL": "assets/img/home/card-blog-1.jpg",
+                                "metaDate": "12.05.26",
+                                "title": "Как подготовить макет к печати и избежать ошибок",
+                                "short": "Краткий чек-лист по подготовке файлов: размеры, вылеты, цветовые профили, шрифты и другие нюансы, которые помогут получить качественный результат без задержек."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-blog.html', {
+                                "thumbURL": "assets/img/home/card-blog-2.jpg",
+                                "metaDate": "12.05.26",
+                                "title": "Какая полиграфия работает лучше для бизнеса",
+                                "short": "Разбираем, какие виды печатной продукции помогают привлекать клиентов: визитки, листовки, каталоги, упаковка, баннеры и сувенирная продукция."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-blog.html', {
+                                "thumbURL": "assets/img/home/card-blog-3.jpg",
+                                "metaDate": "12.05.26",
+                                "title": "Тренды в дизайне полиграфии в 2026 году",
+                                "short": "Минимализм, нестандартные материалы, яркая типографика и современные технологии печати — рассказываем, что сейчас актуально в полиграфическом дизайне."
+                            })
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('../cards/card-blog.html', {
+                                "thumbURL": "assets/img/home/card-blog-1.jpg",
+                                "metaDate": "12.05.26",
+                                "title": "Как подготовить макет к печати и избежать ошибок",
+                                "short": "Краткий чек-лист по подготовке файлов: размеры, вылеты, цветовые профили, шрифты и другие нюансы, которые помогут получить качественный результат без задержек."
+                            })
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-swiper-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <path d="M29.5557 18.6668H7.77789M17.1112 9.3335L7.77789 18.6668L17.1112 28.0002" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button type="button" class="btn btn-secondary btn-swiper-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                        <path d="M7.77783 18.6667L29.5556 18.6667M20.2223 28L29.5556 18.6667L20.2223 9.33333" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__footer d-xl-none">
+        <div class="container">
+            <div class="d-flex flex-wrap gap-5">
+                <a href="#" class="btn btn-secondary flex-grow-1">Смотреть все</a>
+            </div>
+        </div>
+    </div>
+
+</section>

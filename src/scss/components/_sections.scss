@@ -262,3 +262,119 @@
         }
     }
 }
+
+/*------------------------------------------------------------------
+[ section-fabric-foto ]*/
+
+.section-fabric-foto {
+    padding: 40px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-team-slider ]*/
+
+.section-team-slider {
+    padding: 40px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-blog-slider ]*/
+
+.section-blog-slider {
+    padding: 40px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-contacts ]*/
+
+.section-contacts {
+    padding: 40px 0 130px;
+
+    a {
+        text-decoration: none;
+    }
+
+    .contact-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--bs-primary);
+    }
+
+    @include media-breakpoint-down(xl) {
+        .contact-icon svg {
+            width: 18px;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 90px;
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-cta ]*/
+
+.section-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 160px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .section__header {
+        margin-bottom: 32px;
+    }
+
+    .form-wrap {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #fff;
+    }
+
+    .form-control {
+        background-color: #F6F4F3;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 140px 0 140px;
+
+        .section__header {
+            margin-bottom: 40px;
+        }
+
+        .form-wrap {
+            padding: 40px;
+        }
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-home-faq ]*/
+
+.section-home-faq {
+
+}

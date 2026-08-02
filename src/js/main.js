@@ -54,23 +54,41 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // if (document.querySelector('.swiperBlog')) {
-        //     new Swiper('.swiperBlog', {
-        //         slidesPerView: 1,
-        //         loop: true,
-        //         spaceBetween: 24,
-        //         navigation: {
-        //             nextEl: '.swiperBlog-area .btn-custom-swiper-next',
-        //             prevEl: '.swiperBlog-area .btn-custom-swiper-prev',
-        //         },
-        //         pagination: { el: '.swiper-pagination', clickable: true },
-        //         breakpoints: {
-        //             768:  { slidesPerView: 2, spaceBetween: 24 },
-        //             992:  { slidesPerView: 3, spaceBetween: 24 },
-        //             1200: { slidesPerView: 4, spaceBetween: 24 },
-        //         },
-        //     });
-        // }
+        if (document.querySelector('.swiperTeam')) {
+            new Swiper('.swiperTeam', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiperTeam-area .btn-swiper-next',
+                    prevEl: '.swiperTeam-area .btn-swiper-prev',
+                },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                breakpoints: {
+                    768:  { slidesPerView: 2 },
+                    992:  { slidesPerView: 3 },
+                    1200: { slidesPerView: 4 },
+                },
+            });
+        }
+
+        if (document.querySelector('.swiperBlog')) {
+            new Swiper('.swiperBlog', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiperBlog-area .btn-swiper-next',
+                    prevEl: '.swiperBlog-area .btn-swiper-prev',
+                },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                breakpoints: {
+                    768:  { slidesPerView: 2 },
+                    992:  { slidesPerView: 3 },
+                    1200: { slidesPerView: 3 },
+                },
+            });
+        }
     }
 
     //////////////////////////////////////////////////////////////////
