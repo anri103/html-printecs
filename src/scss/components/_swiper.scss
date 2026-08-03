@@ -130,3 +130,25 @@
         border-radius: var(--bs-border-radius);
     }
 }
+
+/* swiperProcessText */
+
+.swiperProcessText {
+    border-radius: var(--bs-border-radius);
+    background-color: #F6F4F3;
+
+    .swiper-slide {
+        height: auto;
+        padding: 14px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .swiper-slide {
+            padding: 28px;
+        }
+    }
+}
+
+/* swiperProcessImage */
+
+// .swiperProcessImage {}

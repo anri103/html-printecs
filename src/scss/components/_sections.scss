@@ -572,3 +572,70 @@
         padding: 0 0 140px;
     }
 }
+
+/*------------------------------------------------------------------
+[ section-how-we-work ]*/
+
+.section-how-we-work {
+    padding: 60px 0;
+
+    .steps-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        // border-left: 2px solid #e7e5e1;
+    }
+    .steps-nav li {
+        position: relative;
+        padding: 10px 0 10px 20px;
+        margin-left: -2px;
+        cursor: pointer;
+        color: #8a8a8a;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-left: 2px solid transparent;
+        transition: color .25s ease, border-color .25s ease;
+        user-select: none;
+    }
+    .steps-nav li .num {
+        margin-right: 10px;
+        font-variant-numeric: tabular-nums;
+    }
+    .steps-nav li:hover {
+        color:#1c1c1c;
+    }
+    .steps-nav li.active {
+        color: var(--bs-primary);
+        border-left-color: var(--bs-primary);
+    }
+    .steps-nav li.active::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -6px;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--bs-primary);
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 140px 0;
+
+        .steps-nav li {
+            font-size: 20px;
+        }
+
+        .steps-nav li .num {
+            margin-right: 16px;
+        }
+
+        .steps-nav li.active::before {
+            width: 16px;
+            height: 16px;
+            left: -9px;
+        }
+    }
+}

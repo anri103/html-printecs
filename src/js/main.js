@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 breakpoints: {
-                    768:  { slidesPerView: 2 },
-                    992:  { slidesPerView: 3 },
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
                     1200: { slidesPerView: 4 },
                 },
             });
@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 breakpoints: {
-                    768:  { slidesPerView: 2 },
-                    992:  { slidesPerView: 3 },
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
                     1200: { slidesPerView: 4 },
                 },
             });
@@ -83,11 +83,76 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 breakpoints: {
-                    768:  { slidesPerView: 2 },
-                    992:  { slidesPerView: 3 },
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
                     1200: { slidesPerView: 3 },
                 },
             });
+        }
+
+        // Секция "Как мы работаем"
+        if (
+            document.querySelector('.swiperProcessImage') &&
+            document.querySelector('.swiperProcessText')
+        ) {
+
+            const stepsNavItems = document.querySelectorAll('#stepsNav li');
+
+            function updateProcessNavState(index) {
+                stepsNavItems.forEach(li => {
+                    li.classList.toggle(
+                        'active',
+                        Number(li.dataset.slideIndex) === index
+                    );
+                });
+            }
+
+            const swiperProcessImage = new Swiper('.swiperProcessImage', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 500,
+                loop: true,
+                allowTouchMove: false
+            });
+
+            const swiperProcessText = new Swiper('.swiperProcessText', {
+                speed: 500,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                },
+
+                on: {
+
+                    init(swiper) {
+                        updateProcessNavState(swiper.realIndex);
+                        swiperProcessImage.slideToLoop(swiper.realIndex, 0);
+                    },
+
+                    realIndexChange(swiper) {
+                        updateProcessNavState(swiper.realIndex);
+                        swiperProcessImage.slideToLoop(swiper.realIndex);
+                    }
+
+                }
+
+            });
+
+            stepsNavItems.forEach(li => {
+
+                li.addEventListener('click', () => {
+
+                    swiperProcessText.slideToLoop(
+                        Number(li.dataset.slideIndex)
+                    );
+
+                });
+
+            });
+
         }
     }
 
