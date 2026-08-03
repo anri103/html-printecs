@@ -224,3 +224,15 @@
         }
     }
 }
+
+.d-grid .card-blog {
+    .card-thumb-wrapper {
+        height: 170px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .card-thumb-wrapper {
+            height: 440px;
+        }
+    }
+}

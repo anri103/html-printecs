@@ -43,103 +43,15 @@
 }
 
 /*------------------------------------------------------------------
-[ accordion ]*/
-
-.accordion-faq {
-    --bs-accordion-color: #F0DDD8;
-    --bs-accordion-bg: #221E2B;
-    --bs-accordion-btn-padding-x: 0;
-    --bs-accordion-btn-padding-y: 0;
-    --bs-accordion-btn-color: #fff;
-    --bs-accordion-btn-bg: #221E2B;
-    --bs-accordion-btn-icon-transform: rotate(180deg);
-    --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-body-padding-x: 0;
-    --bs-accordion-body-padding-y: 0;
-    --bs-accordion-active-color: #fff;
-    --bs-accordion-active-bg: #221E2B;
-    --theme-accordion-divider: 10px;
-
-    .accordion-item {
-        overflow: hidden;
-        padding: 28px;
-        border: none !important;
-        border-radius: var(--bs-border-radius-lg) !important;
-        background: radial-gradient(96.58% 88.3% at 2.23% 7.45%, rgba(59, 39, 69, 0.4) 0%, rgba(35, 30, 44, 0.4) 100%);
-    
-        &:not(:last-of-type) {
-            margin-bottom: 12px;
-        }
-    }
-
-    .accordion-button {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.3;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        gap: 15px;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        background: transparent;
-
-        &::after {
-            content: none;
-        }
-
-        .accordion-icon {
-            flex-shrink: 0;
-            margin-left: auto;
-    
-            svg {
-                transition: var(--bs-accordion-btn-icon-transition);
-            }
-        }
-        
-        &:not(.collapsed) {
-
-            .accordion-icon svg {
-                transform: var(--bs-accordion-btn-icon-transform);
-            }
-        }
-    }
-    
-    .accordion-body {
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 1.3;
-    
-        p:last-child {
-            margin-bottom: 0;
-        }
-    
-        &::before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: var(--theme-accordion-divider);
-        }
-    }
-    
-    @include media-breakpoint-up(lg) {
-        --theme-accordion-divider: 15px;
-    
-        .accordion-button {
-            font-size: 18px;
-        }
-
-        .accordion-body {
-            font-size: 18px;
-        }
-    }
-}
-
-/*------------------------------------------------------------------
 [ breadcrumb ]*/
 
+.nav-breadcrumb {
+    padding: 28px 0;
+}
+
 .breadcrumb {
-    --bs-breadcrumb-font-size: var(--fs-x-small);
-    --bs-breadcrumb-margin-bottom: 10px;
+    // --bs-breadcrumb-font-size: var(--fs-x-small);
+    --bs-breadcrumb-margin-bottom: 0px;
 
     // @include media-breakpoint-up(xl) {
     //     --bs-breadcrumb-font-size: var(--fs-small);
@@ -220,10 +132,21 @@
 }
 
 /*------------------------------------------------------------------
+[ section-home-services ]*/
+
+.section-home-services {
+    padding: 40px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
 [ section-services ]*/
 
 .section-services {
-    padding: 40px 0 60px;
+    padding: 32px 0 60px;
 
     @include media-breakpoint-up(xl) {
         padding: 90px 0 140px;
@@ -293,6 +216,64 @@
 
     @include media-breakpoint-up(xl) {
         padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-blog-grid ]*/
+
+.section-blog-grid {
+    padding: 32px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-blog-single ]*/
+
+.section-blog-single {
+    padding: 0 0 60px;
+
+    .blog-single__img-wrap {
+        height: 170px;
+        margin-bottom: 32px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 0 0 140px;
+
+        .blog-single__img-wrap {
+            height: 540px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.blog-single__content {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 1.667rem + 1.67vw, 3rem);
+        text-transform: uppercase;
+    }
+
+    figure {
+        margin: 30px 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        h1 {
+            margin-bottom: 28px;
+        }
+
+        figure {
+            margin: 48px 0;
+        }
     }
 }
 
@@ -376,5 +357,218 @@
 [ section-home-faq ]*/
 
 .section-home-faq {
+    padding: 60px 0 60px;
 
+    @include media-breakpoint-up(xl) {
+        padding: 140px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-faq ]*/
+
+.section-faq {
+    padding: 32px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 90px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ accordion ]*/
+
+.accordion-faq {
+    --bs-accordion-color: var(--bs-body-color);
+    --bs-accordion-bg: #F6F4F3;
+    --bs-accordion-btn-padding-x: 0;
+    --bs-accordion-btn-padding-y: 0;
+    --bs-accordion-btn-color: var(--bs-body-color);
+    --bs-accordion-btn-bg: #F6F4F3;
+    --bs-accordion-btn-icon-transform: rotate(135deg);
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-body-padding-x: 0;
+    --bs-accordion-body-padding-y: 0;
+    --bs-accordion-active-color: var(--bs-body-color);
+    --bs-accordion-active-bg: #F6F4F3;
+    --theme-accordion-divider: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .accordion-item {
+        overflow: hidden;
+        padding: 12px 16px;
+        border: none !important;
+        border-radius: var(--bs-border-radius) !important;
+    }
+
+    .accordion-button {
+        line-height: 1.2;
+        gap: 16px;
+        border-radius: 0 !important;
+        background: transparent;
+        box-shadow: none !important;
+
+        &::after {
+            content: none;
+        }
+
+        .accordion-icon {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--bs-primary);
+            margin-left: auto;
+    
+            svg {
+                transition: var(--bs-accordion-btn-icon-transition);
+            }
+        }
+        
+        &:not(.collapsed) {
+
+            .accordion-icon svg {
+                transform: var(--bs-accordion-btn-icon-transform);
+            }
+        }
+    }
+    
+    .accordion-body {
+        font-size: clamp(0.75rem, 0.583rem + 0.83vw, 1.25rem);
+    
+        p:last-child {
+            margin-bottom: 0;
+        }
+    
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: var(--theme-accordion-divider);
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        .accordion-button {
+            .accordion-icon svg {
+                width: 17px;
+            }
+        }
+    }
+    
+    @include media-breakpoint-up(xl) {
+        --theme-accordion-divider: 16px;
+        gap: 20px;
+
+        .accordion-item {
+            padding: 20px 24px;
+        }
+    
+        .accordion-button {
+            .accordion-icon {
+                width: 52px;
+                height: 52px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-search-result ]*/
+
+.section-search-result {
+    padding: 32px 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 80px 0 140px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ section-404 ]*/
+
+.section-404 {
+    padding: 130px 0 250px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 115px 0 100px;
+    }
+}
+
+/*------------------------------------------------------------------
+[ pagination ]*/
+
+.pagination {
+    --si-pagination-padding-x: 0.875rem;
+    --si-pagination-padding-y: 0.45rem;
+    --si-pagination-font-size: 0.875rem;
+    --si-pagination-color: #33354d;
+    --si-pagination-bg: transparent;
+    --si-pagination-border-width: 0;
+    --si-pagination-border-color: var(--si-border-color);
+    --si-pagination-border-radius: var(--si-border-radius);
+    --si-pagination-hover-color: #6366f1;
+    --si-pagination-hover-bg: #eff2fc;
+    --si-pagination-hover-border-color: var(--si-border-color);
+    --si-pagination-focus-color: #6366f1;
+    --si-pagination-focus-bg: var(--si-secondary-bg);
+    --si-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, .25);
+    --si-pagination-active-color: #fff;
+    --si-pagination-active-bg: #6366f1;
+    --si-pagination-active-border-color: #6366f1;
+    --si-pagination-disabled-color: var(--si-secondary-color);
+    --si-pagination-disabled-bg: transparent;
+    --si-pagination-disabled-border-color: var(--si-border-color);
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.page-item {
+    margin: 0 .125rem;
+}
+
+.page-item:first-child {
+    margin-left: 0;
+}
+
+.page-item:last-child {
+    margin-right: 0;
+}
+
+.page-link {
+    background-color: var(--si-pagination-bg);
+    border: var(--si-pagination-border-width) solid var(--si-pagination-border-color);
+    color: var(--si-pagination-color);
+    display: block;
+    font-size: var(--si-pagination-font-size);
+    padding: var(--si-pagination-padding-y) var(--si-pagination-padding-x);
+    position: relative;
+    text-decoration: none;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.page-link {
+    align-items: center;
+    border-radius: var(--si-pagination-border-radius);
+    display: flex;
+    font-weight: var(--si-pagination-font-weight);
+    height: 100%;
+}
+
+/*------------------------------------------------------------------
+[ section-about ]*/
+
+.section-about {
+    padding: 0 0 60px;
+
+    @include media-breakpoint-up(xl) {
+        padding: 0 0 140px;
+    }
 }
