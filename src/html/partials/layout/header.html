@@ -49,16 +49,22 @@
     <header class="header" id="siteHeader">
 
         <!-- desktop -->
-        <div class="header-bar header__desktop @@if(headerFrontPage){position-absolute start-0 end-0 z-1} mt-4" data-device="desktop">
+        <div class="header-bar header__desktop mt-4 @@if(transparentHeaderBar){transparentHeaderBar}" data-device="desktop">
 
             <div class="header-row main-row">
                 <div class="container">
-                    <div class="flex-grow-1 d-flex align-items-center justify-content-between bg-white rounded p-4" style="--bs-bg-opacity: 0.12; backdrop-filter: blur(12px);">
+                    @@if(transparentHeaderBar){<div class="d-flex align-items-center justify-content-between bg-white rounded p-4 w-100" style="--bs-bg-opacity: 0.12; backdrop-filter: blur(12px);">}
+                    @@if(!transparentHeaderBar){<div class="d-flex align-items-center justify-content-between bg-light rounded p-4 w-100" style="backdrop-filter: blur(12px);">}
 
                         <!-- logo -->
                         <div class="header-widget__logo">
                             <a href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="Printecs">
+                                @@if(transparentHeaderBar){
+                                    <img src="assets/img/logo/logo-white.svg" alt="Printecs">
+                                }
+                                @@if(!transparentHeaderBar){
+                                    <img src="assets/img/logo/logo-black.svg" alt="Printecs">
+                                }
                             </a>
                         </div>
         
@@ -66,27 +72,27 @@
                         <nav class="header-widget__navigation">
                             <ul class="primary-nav" id="primaryNav">
                                 <li>
-                                    <a href="services.html">
+                                    <a href="services.html" class="@@if(activeLink === 'services'){active}">
                                         <span>Услуги</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="about.html">
+                                    <a href="about.html" class="@@if(activeLink === 'about'){active}">
                                         <span>О компании</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">
+                                    <a href="faq.html" class="@@if(activeLink === 'faq'){active}">
                                         <span>Вопрос-ответ</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">
+                                    <a href="blog.html" class="@@if(activeLink === 'blog'){active}">
                                         <span>Блог</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="contacts.html">
+                                    <a href="contacts.html" class="@@if(activeLink === 'contacts'){active}">
                                         <span>Контакты</span>
                                     </a>
                                 </li>

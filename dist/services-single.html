@@ -50,16 +50,20 @@
     <header class="header" id="siteHeader">
 
         <!-- desktop -->
-        <div class="header-bar header__desktop  mt-4" data-device="desktop">
+        <div class="header-bar header__desktop mt-4 " data-device="desktop">
 
             <div class="header-row main-row">
                 <div class="container">
-                    <div class="flex-grow-1 d-flex align-items-center justify-content-between bg-white rounded p-4" style="--bs-bg-opacity: 0.12; backdrop-filter: blur(12px);">
+                    
+                    <div class="d-flex align-items-center justify-content-between bg-light rounded p-4 w-100" style="backdrop-filter: blur(12px);">
 
                         <!-- logo -->
                         <div class="header-widget__logo">
                             <a href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="Printecs">
+                                
+                                
+                                    <img src="assets/img/logo/logo-black.svg" alt="Printecs">
+                                
                             </a>
                         </div>
         
@@ -67,27 +71,27 @@
                         <nav class="header-widget__navigation">
                             <ul class="primary-nav" id="primaryNav">
                                 <li>
-                                    <a href="services.html">
+                                    <a href="services.html" class="active">
                                         <span>Услуги</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="about.html">
+                                    <a href="about.html" class="">
                                         <span>О компании</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">
+                                    <a href="faq.html" class="">
                                         <span>Вопрос-ответ</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">
+                                    <a href="blog.html" class="">
                                         <span>Блог</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="contacts.html">
+                                    <a href="contacts.html" class="">
                                         <span>Контакты</span>
                                     </a>
                                 </li>
@@ -231,7 +235,7 @@
 <!-- main -->
 <main class="main">
 
-    <!-- section-about -->
+    <!-- section-services-single-hero -->
     <section class="section section-about">
 
     <div class="section__header">
@@ -239,17 +243,17 @@
             <nav class="nav-breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="about.html">О компании</a>
+                        <a href="services.html">Услуги</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <span>О нас</span>
+                        <span>Печать брошюр</span>
                     </li>
                 </ol>
             </nav>
             <div class="row">
                 <div class="col-xl">
                     <div class="d-flex flex-column gap-5 gap-xl-7">
-                        <h1 class="section__title h1 fw-600 text-uppercase">О нас</h1>
+                        <h1 class="section__title h1 fw-600 text-uppercase">Печать брошюр</h1>
                     </div>
                 </div>
             </div>
@@ -261,13 +265,24 @@
             <div style="max-width: 1525px;">
                 <div class="row gy-7 gx-xl-13">
                     <div class="col-xl-12">
-                        <img class="img-fluid rounded-3" src="assets/img/home/about.jpg" alt="">
+                        <img class="img-fluid rounded-3" src="assets/img/home/service-hero.jpg" alt="">
                     </div>
                     <div class="col-xl-12">
-                        <div class="fs-3">
-                            <p>Компания специализируется на производстве полиграфической, текстильной и сувенирной продукции для бизнеса и корпоративных клиентов.</p>
-                            <p>За годы работы мы выстроили полный цикл производства — от подготовки макетов до выпуска готовой продукции. Используем современное оборудование, контролируем качество на каждом этапе и предлагаем оптимальные решения под задачи клиента.</p>
-                            <p>Нам доверяют компании из разных сфер благодаря стабильному качеству, соблюдению сроков и профессиональному подходу к работе.</p>
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <div>
+                                <h2 class="text-uppercase fw-600 mb-5 mb-9">Детали</h2>
+                                <ul class="d-flex flex-column gap-2 gap-xl-5 marker-primary fs-3">
+                                    <li>Материал: офсетная, мелованная, дизайнерская бумага.</li>
+                                    <li>Формат: А3, А4, А5 и нестандартные размеры.</li>
+                                    <li>Дизайн: доработка или разработка уникального макета.</li>
+                                    <li>Методы печати: офсетная, цифровая, УФ-печать.</li>
+                                    <li>Постпечатная обработка: тиснение, фальцовка, скрепление, ламинация, вырубка, скругление углов, перфорация.</li>
+                                    <li>Сроки: от 1 дня.</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex mt-9">
+                                <a href="#" class="btn btn-primary flex-grow-1 flex-xl-grow-0">Рассчитать стоимость</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -50,16 +50,20 @@
     <header class="header" id="siteHeader">
 
         <!-- desktop -->
-        <div class="header-bar header__desktop  mt-4" data-device="desktop">
+        <div class="header-bar header__desktop mt-4 " data-device="desktop">
 
             <div class="header-row main-row">
                 <div class="container">
-                    <div class="flex-grow-1 d-flex align-items-center justify-content-between bg-white rounded p-4" style="--bs-bg-opacity: 0.12; backdrop-filter: blur(12px);">
+                    
+                    <div class="d-flex align-items-center justify-content-between bg-light rounded p-4 w-100" style="backdrop-filter: blur(12px);">
 
                         <!-- logo -->
                         <div class="header-widget__logo">
                             <a href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="Printecs">
+                                
+                                
+                                    <img src="assets/img/logo/logo-black.svg" alt="Printecs">
+                                
                             </a>
                         </div>
         
@@ -67,27 +71,27 @@
                         <nav class="header-widget__navigation">
                             <ul class="primary-nav" id="primaryNav">
                                 <li>
-                                    <a href="services.html">
+                                    <a href="services.html" class="">
                                         <span>Услуги</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="about.html">
+                                    <a href="about.html" class="active">
                                         <span>О компании</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">
+                                    <a href="faq.html" class="">
                                         <span>Вопрос-ответ</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">
+                                    <a href="blog.html" class="">
                                         <span>Блог</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="contacts.html">
+                                    <a href="contacts.html" class="">
                                         <span>Контакты</span>
                                     </a>
                                 </li>
@@ -230,6 +234,132 @@
 
 <!-- main -->
 <main class="main">
+
+    <!-- section-clients-hero -->
+    <section class="section section-clients-hero">
+
+    <div class="section__header">
+        <div class="container">
+            <nav class="nav-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="about.html">О компании</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <span>Клиенты и отзывы</span>
+                    </li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-xl">
+                    <div class="d-flex flex-column gap-5 gap-xl-7">
+                        <h1 class="section__title h1 fw-600 text-uppercase">Клиенты и отзывы</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__body">
+        <div class="container">
+
+            <div class="d-grid grid-cols-1 grid-cols-xl-3 gap-4 gap-xl-6">
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-1.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ООО «Газпром межрегионгаз Йошкар-Ола» выражает благодарность ООО «Принтекс» за качественное и своевременное изготовление и конвертование счетов на оплату газа. Отмечается высокий профессионализм компании, надежность услуг и выполнение обязательств в установленные сроки.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-2.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ПАО «ТНС энерго Марий Эл» рекомендует ООО «Принтекс» как надежного и профессионального партнера в сфере полиграфических услуг. В отзыве отмечаются высокое качество продукции, соблюдение сроков, оперативность в решении задач и высокий уровень обслуживания.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-3.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ОАО «Щелангерский химзавод „Сайвер“» выражает благодарность ООО «Принтекс» за многолетнее сотрудничество. Компания отмечает своевременное выполнение работ, соблюдение согласованных сроков, высокое качество продукции и профессионализм сотрудников. ООО «Принтекс» характеризуется как надёжный и ответственный партнёр.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-4.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ООО «МариАвтоЦентр» выражает благодарность ООО «Принтекс» за помощь в изготовлении полиграфических материалов для автосалона Volkswagen. Отмечаются профессионализм, оперативность в решении поставленных задач и высокое качество выполненных работ.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-5.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ЗАО «ЭР-Телеком Холдинг» выражает благодарность ООО «Принтекс» за эффективное и плодотворное сотрудничество. Компания отмечает успешное взаимодействие и выражает признательность за совместную работу.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-6.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>Компания выражает благодарность ООО «Принтекс» за высокое качество выполнения работ, оперативность, профессионализм сотрудников и высокий уровень коммуникации.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-7.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ООО «Газпром межрегионгаз Йошкар-Ола» выражает благодарность ООО «Принтекс» за качественное и своевременное изготовление и конвертование счетов на оплату газа. Отмечается высокий профессионализм компании, надежность услуг и выполнение обязательств в установленные сроки.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-5.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ЗАО «ЭР-Телеком Холдинг» выражает благодарность ООО «Принтекс» за эффективное и плодотворное сотрудничество. Компания отмечает успешное взаимодействие и выражает признательность за совместную работу.</p>
+        </div>
+    </div>
+</div>
+                <div class="card card-review">
+    <div class="card-body">
+        <div class="card-logo-wrap">
+            <img class="img-fluid" src="assets/img/home/review-logo-8.png" alt="">
+        </div>
+        <div class="text-box">
+            <p>ПАО «БИНБАНК» выражает благодарность ООО «Принтекс» за высокое качество и отличную организацию работы при оказании рекламно-полиграфических услуг. Отмечается профессиональный подход к выполнению поставленных задач и готовность к дальнейшему развитию взаимовыгодных отношений.</p>
+        </div>
+    </div>
+</div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
     <!-- section-cta -->
     <section class="section section-cta" style="background-image: url('assets/img/home/bg-cta.jpg');">

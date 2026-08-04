@@ -14,3 +14,7 @@
 .inset-0 { inset: 0 !important; }
 
 .scrollbar-thin { scrollbar-width: thin; }
+
+.marker-primary li::marker {
+    color: var(--bs-primary);
+}

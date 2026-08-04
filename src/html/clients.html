@@ -1,11 +1,15 @@
 <!-- header -->
 @@include('partials/layout/header.html', {
-    "headerFrontPage": false,
+    "transparentHeaderBar": false,
+    "activeLink": "about",
     "title": "Клиенты и отзывы"
 })
 
 <!-- main -->
 <main class="main">
+
+    <!-- section-clients-hero -->
+    @@include('partials/sections/section-clients-hero.html')
 
     <!-- section-cta -->
     @@include('partials/sections/section-cta.html')

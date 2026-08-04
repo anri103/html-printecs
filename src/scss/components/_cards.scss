@@ -236,3 +236,58 @@
         }
     }
 }
+
+/* card-review */
+
+.card-review {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: var(--bs-border-radius-sm);
+    --bs-card-inner-border-radius: 0;
+    --bs-card-bg: #F6F4F3;
+
+    .card-logo-wrap {
+        margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        --bs-card-spacer-y: 2rem;
+        --bs-card-spacer-x: 2rem;
+        --bs-card-border-radius: var(--bs-border-radius);
+
+        .card-logo-wrap {
+            margin-bottom: 28px;
+        }
+    }
+}
+
+/* card-manager */
+
+.card-manager {
+    --bs-card-spacer-y: 0.5rem;
+    --bs-card-spacer-x: 0.5rem;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: transparent;
+    --bs-card-border-radius: var(--bs-border-radius-sm);
+    --bs-card-inner-border-radius: 0;
+    --bs-card-bg: #F6F4F3;
+
+    .grid-wrap {
+        display: grid;
+        grid-template-columns: 125px 1fr;
+        gap: 0.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        --bs-card-spacer-y: 1rem;
+        --bs-card-spacer-x: 1rem;
+        --bs-card-border-radius: var(--bs-border-radius);
+
+        .grid-wrap {
+            grid-template-columns: 200px 1fr;
+            gap: 1rem;
+        }
+    }
+}

@@ -97,7 +97,7 @@
             position: relative;
             display: block;
             padding: 4px 16px;
-            color: #fff;
+            color: var(--bs-body-color);
             font-size: 16px;
             font-weight: 400;
             text-decoration: none;
@@ -142,5 +142,23 @@
 
     a.active {
         color: #050505;
+    }
+}
+
+/* transparentHeaderBar */
+
+.transparentHeaderBar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    .primary-nav li a {
+        color: #fff;
+
+        &:hover,
+        &.active {
+            color: var(--bs-primary);
+        }
     }
 }
