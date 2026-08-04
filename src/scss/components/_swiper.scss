@@ -166,3 +166,18 @@
         }
     }
 }
+
+/* swiperYears */
+
+.swiperYears {
+
+    // .swiper-slide {
+    //     width: auto;
+    // }
+
+    .swiper-slide-active {
+        color: var(--bs-primary);
+    }
+
+    // @include media-breakpoint-up(xl) {}
+}

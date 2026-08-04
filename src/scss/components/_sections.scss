@@ -706,3 +706,14 @@
         padding: 90px 0 140px;
     }
 }
+
+/*------------------------------------------------------------------
+[ section-history-slider ]*/
+
+.section-history-slider {
+    padding: 60px 0;
+
+    @include media-breakpoint-up(xl) {
+        padding: 140px 0;
+    }
+}

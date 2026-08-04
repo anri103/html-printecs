@@ -170,8 +170,70 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
             });
+        }
+
+        // Timeline (годы + контент)
+        if (
+            document.querySelector('.swiperYears') &&
+            document.querySelector('.swiperHistory')
+        ) {
+
+            const swiperYears = new Swiper('.swiperYears', {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                speed: 500,
+                centeredSlides: true,
+                slideToClickedSlide: true,
+                watchSlidesProgress: true,
+
+                navigation: {
+                    nextEl: '.swiperYears-area .btn-swiper-next',
+                    prevEl: '.swiperYears-area .btn-swiper-prev',
+                },
+
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3
+                    },
+                    992: {
+                        slidesPerView: 3
+                    },
+                    1200: {
+                        slidesPerView: 5
+                    }
+                }
+            });
+
+            const swiperHistory = new Swiper('.swiperHistory', {
+                speed: 500,
+                autoHeight: true,
+
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                }
+            });
+
+            // Контент -> годы
+            swiperHistory.on('slideChange', function () {
+
+                swiperYears.slideTo(swiperHistory.realIndex);
+
+            });
+
+            // Клик по году
+            swiperYears.on('click', function () {
+
+                if (swiperYears.clickedIndex !== undefined) {
+
+                    swiperHistory.slideTo(swiperYears.clickedIndex);
+
+                }
+
+            });
 
         }
+
     }
 
     //////////////////////////////////////////////////////////////////
