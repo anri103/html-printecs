@@ -440,10 +440,17 @@
     <div class="section__body">
         <div class="container">
             <!-- tabs-nav -->
-            <div></div>
+            <nav class="nav tab-nav nav-pills flex-nowrap text-nowrap mx-n-gx px-gx overflow-x-auto scrollbar-thin pb-4 mb-4 mb-xl-12" role="tablist">
+                <button type="button" role="tab" class="nav-link rounded-pill active" data-bs-toggle="pill" data-bs-target="#tab-cat-popular" aria-selected="true">Популярные услуги</button>
+                <button type="button" role="tab" class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#tab-cat-printing" aria-selected="false">Услуги полиграфии</button>
+                <button type="button" role="tab" class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#tab-cat-popular" aria-selected="false">Печать по текстилю</button>
+                <button type="button" role="tab" class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#tab-cat-printing" aria-selected="false">Сувенирная продукция</button>
+            </nav>
             <!-- tabs-content -->
-            <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
-                <div class="card card-service">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab-cat-popular" role="tabpanel" tabindex="0">
+                    <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -458,7 +465,7 @@
         </div>
     </div>
 </div>
-                <div class="card card-service">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -473,7 +480,7 @@
         </div>
     </div>
 </div>
-                <div class="card card-service">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -488,7 +495,7 @@
         </div>
     </div>
 </div>
-                <div class="card card-service">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -503,7 +510,7 @@
         </div>
     </div>
 </div>
-                <div class="card card-service">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -518,7 +525,7 @@
         </div>
     </div>
 </div>
-                <div class="card card-service">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -533,7 +540,7 @@
         </div>
     </div>
 </div>
-                <div class="card card-service">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -548,7 +555,7 @@
         </div>
     </div>
 </div>
-                <div class="card card-service">
+                        <div class="card card-service">
     <div class="card-body">
         <div class="card-thumb-wrapper">
             <a href="services-single.html">
@@ -563,6 +570,57 @@
         </div>
     </div>
 </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab-cat-printing" role="tabpanel" tabindex="0">
+                    <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
+                        <div class="card card-service">
+    <div class="card-body">
+        <div class="card-thumb-wrapper">
+            <a href="services-single.html">
+                <img src="assets/img/home/card-cat-3.png" alt="">
+            </a>
+        </div>
+        <div class="card-title">
+            <a href="services-single.html">Визитки</a>
+        </div>
+        <div>
+            <a href="services-single.html" class="btn btn-primary w-100">Заказать</a>
+        </div>
+    </div>
+</div>
+                        <div class="card card-service">
+    <div class="card-body">
+        <div class="card-thumb-wrapper">
+            <a href="services-single.html">
+                <img src="assets/img/home/card-cat-2.png" alt="">
+            </a>
+        </div>
+        <div class="card-title">
+            <a href="services-single.html">Бланки</a>
+        </div>
+        <div>
+            <a href="services-single.html" class="btn btn-primary w-100">Заказать</a>
+        </div>
+    </div>
+</div>
+                        <div class="card card-service">
+    <div class="card-body">
+        <div class="card-thumb-wrapper">
+            <a href="services-single.html">
+                <img src="assets/img/home/card-cat-1.png" alt="">
+            </a>
+        </div>
+        <div class="card-title">
+            <a href="services-single.html">Афиши</a>
+        </div>
+        <div>
+            <a href="services-single.html" class="btn btn-primary w-100">Заказать</a>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -713,7 +771,7 @@
     <div class="section__body">
         <div class="container">
 
-            <div style="border-left: 2px solid var(--bs-primary);">
+            <div class="border-start border-2 border-primary">
                 <div class="row gy-7">
     
                     <!-- LEFT: nav + text swiper -->
@@ -843,25 +901,37 @@
         <div class="container">
             <div class="d-grid grid-cols-1 grid-cols-xl-2 gap-5 gap-xl-7">
                 <div>
-                    <img class="img-fluid rounded-3" src="assets/img/home/gallery-1.jpg" alt="">
+                    <a href="assets/img/home/gallery-1.jpg" data-fancybox="fabric-gallery">
+                        <img class="img-fluid rounded-3" src="assets/img/home/gallery-1.jpg" alt="">
+                    </a>
                 </div>
                 <div class="d-grid grid-cols-2 gap-5 gap-xl-7">
                     <div>
-                        <img class="img-fluid rounded-3" src="assets/img/home/gallery-2.jpg" alt="">
+                        <a href="assets/img/home/gallery-2.jpg" data-fancybox="fabric-gallery">
+                            <img class="img-fluid rounded-3" src="assets/img/home/gallery-2.jpg" alt="">
+                        </a>
                     </div>
                     <div>
-                        <img class="img-fluid rounded-3" src="assets/img/home/gallery-3.jpg" alt="">
+                        <a href="assets/img/home/gallery-3.jpg" data-fancybox="fabric-gallery">
+                            <img class="img-fluid rounded-3" src="assets/img/home/gallery-3.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="order-xl-last">
-                    <img class="img-fluid rounded-3" src="assets/img/home/gallery-6.jpg" alt="">
+                    <a href="assets/img/home/gallery-6.jpg" data-fancybox="fabric-gallery">
+                        <img class="img-fluid rounded-3" src="assets/img/home/gallery-6.jpg" alt="">
+                    </a>
                 </div>
                 <div class="d-grid grid-cols-2 gap-5 gap-xl-7">
                     <div>
-                        <img class="img-fluid rounded-3" src="assets/img/home/gallery-4.jpg" alt="">
+                        <a href="assets/img/home/gallery-4.jpg" data-fancybox="fabric-gallery">
+                            <img class="img-fluid rounded-3" src="assets/img/home/gallery-4.jpg" alt="">
+                        </a>
                     </div>
                     <div>
-                        <img class="img-fluid rounded-3" src="assets/img/home/gallery-5.jpg" alt="">
+                        <a href="assets/img/home/gallery-5.jpg" data-fancybox="fabric-gallery">
+                            <img class="img-fluid rounded-3" src="assets/img/home/gallery-5.jpg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>

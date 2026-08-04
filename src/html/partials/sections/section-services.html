@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xl">
                     <div class="d-flex flex-column gap-5 gap-xl-7">
-                        <h2 class="section__title h1 fw-600 text-uppercase">Наши услуги</h2>
+                        <h1 class="section__title h1 fw-600 text-uppercase">Наши услуги</h1>
                     </div>
                 </div>
             </div>
@@ -15,41 +15,66 @@
     <div class="section__body">
         <div class="container">
             <!-- tabs-nav -->
-            <div></div>
+            <nav class="nav tab-nav nav-pills flex-nowrap text-nowrap mx-n-gx px-gx overflow-x-auto scrollbar-thin pb-4 mb-4 mb-xl-12" role="tablist">
+                <button type="button" role="tab" class="nav-link rounded-pill active" data-bs-toggle="pill" data-bs-target="#tab-cat-popular" aria-selected="true">Популярные услуги</button>
+                <button type="button" role="tab" class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#tab-cat-printing" aria-selected="false">Услуги полиграфии</button>
+                <button type="button" role="tab" class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#tab-cat-popular" aria-selected="false">Печать по текстилю</button>
+                <button type="button" role="tab" class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#tab-cat-printing" aria-selected="false">Сувенирная продукция</button>
+            </nav>
             <!-- tabs-content -->
-            <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-1.png",
-                    "title": "Афиши"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-2.png",
-                    "title": "Бланки"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-3.png",
-                    "title": "Визитки"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-4.png",
-                    "title": "Открытки"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-5.png",
-                    "title": "Листовки"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-6.png",
-                    "title": "Блокноты"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-7.png",
-                    "title": "Пакеты"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-8.png",
-                    "title": "Этикетки"
-                })
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab-cat-popular" role="tabpanel" tabindex="0">
+                    <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-1.png",
+                            "title": "Афиши"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-2.png",
+                            "title": "Бланки"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-3.png",
+                            "title": "Визитки"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-4.png",
+                            "title": "Открытки"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-5.png",
+                            "title": "Листовки"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-6.png",
+                            "title": "Блокноты"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-7.png",
+                            "title": "Пакеты"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-8.png",
+                            "title": "Этикетки"
+                        })
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab-cat-printing" role="tabpanel" tabindex="0">
+                    <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-3.png",
+                            "title": "Визитки"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-2.png",
+                            "title": "Бланки"
+                        })
+                        @@include('../cards/card-service.html', {
+                            "thumbURL": "assets/img/home/card-cat-1.png",
+                            "title": "Афиши"
+                        })
+                    </div>
+                </div>
             </div>
         </div>
     </div>

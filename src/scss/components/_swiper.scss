@@ -149,6 +149,20 @@
     }
 }
 
-/* swiperProcessImage */
+/* swiperGallery */
 
-// .swiperProcessImage {}
+.swiperGallery {
+    border-radius: var(--bs-border-radius-sm);
+
+    .swiper-slide {
+        height: 300px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        border-radius: var(--bs-border-radius);
+
+        .swiper-slide {
+            height: 500px;
+        }
+    }
+}
