@@ -45,38 +45,6 @@
     }
 }
 
-/* swiperClients */
-
-.swiperClients {
-    .swiper-wrapper {
-        -webkit-transition-timing-function: linear !important;
-        transition-timing-function: linear !important;
-    }
-
-    .swiper-slide {
-        width: auto;
-    }
-
-    .swiper-img {
-        padding: 0 4px;
-
-        img {
-            width: auto;
-            height: 40px;
-        }
-    }
-
-    @include media-breakpoint-up(xl) {
-        .swiper-img {
-            padding: 0 30px;
-
-            img {
-                height: 90px;
-            }
-        }
-    }
-}
-
 /* swiperFeatures */
 
 .swiperFeatures {
@@ -171,13 +139,46 @@
 
 .swiperYears {
 
-    // .swiper-slide {
-    //     width: auto;
-    // }
+    .year-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--bs-body-color);
+        }
+
+        .year-title {
+            font-size: 34px;
+            font-weight: 500;
+        }
+    }
 
     .swiper-slide-active {
         color: var(--bs-primary);
+
+        .year-item::before {
+            background-color: var(--bs-primary);
+        }
     }
 
-    // @include media-breakpoint-up(xl) {}
+    @include media-breakpoint-up(xl) {
+        .year-item {
+            &::before {
+                width: 18px;
+                height: 18px;
+            }
+
+            .year-title {
+                font-size: 80px;
+            }
+        }
+    }
 }

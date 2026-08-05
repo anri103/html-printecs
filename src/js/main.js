@@ -3,6 +3,24 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     //////////////////////////////////////////////////////////////////
+    // [ Mobile Submenu ]
+
+    function initMobSubmenu() {
+        const mobileSubmenuTogglers = document.querySelectorAll('.submenu-toggler');
+        if (!mobileSubmenuTogglers) return;
+
+        mobileSubmenuTogglers.forEach(toggler => {
+            toggler.addEventListener('click', function () {
+                const submenu = this.nextElementSibling;
+                if (submenu) {
+                    submenu.classList.toggle('open');
+                    this.classList.toggle('submenu-active');
+                }
+            });
+        });
+    }
+
+    //////////////////////////////////////////////////////////////////
     // [ Back to Top Button ]
 
     function initBackToTop() {
@@ -23,18 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function initSwipers() {
         if (typeof Swiper === 'undefined') return;
-
-        if (document.querySelector('.swiperClients')) {
-            new Swiper('.swiperClients', {
-                slidesPerView: 'auto',
-                spaceBetween: 0,
-                loop: true,
-                speed: 5000,
-                // centeredSlides: true,
-                allowTouchMove: false,
-                autoplay: { delay: 1, disableOnInteraction: true },
-            });
-        }
 
         if (document.querySelector('.swiperFeatures')) {
             new Swiper('.swiperFeatures', {
@@ -214,25 +220,94 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            // Контент -> годы
-            swiperHistory.on('slideChange', function () {
-
-                swiperYears.slideTo(swiperHistory.realIndex);
-
-            });
-
-            // Клик по году
-            swiperYears.on('click', function () {
-
-                if (swiperYears.clickedIndex !== undefined) {
-
-                    swiperHistory.slideTo(swiperYears.clickedIndex);
-
-                }
-
-            });
+            swiperYears.controller.control = swiperHistory;
+            swiperHistory.controller.control = swiperYears;
 
         }
+
+    }
+
+    //////////////////////////////////////////////////////////////////
+    // [ initClientsMarquee ]
+
+    function initClientsMarquee() {
+
+        const marquee = document.querySelector('.clients-marquee');
+
+        if (!marquee) return;
+
+        const track = marquee.querySelector('.clients-track');
+
+        // Дублируем логотипы один раз
+        const items = [...track.children];
+
+        items.forEach(item => {
+            track.appendChild(item.cloneNode(true));
+        });
+
+        let position = 0;
+        let paused = false;
+
+        const speed = 0.935;
+
+        function animate() {
+
+            if (!paused) {
+
+                position -= speed;
+
+                const half = track.scrollWidth / 2;
+
+                if (Math.abs(position) >= half) {
+                    position = 0;
+                }
+
+                track.style.transform = `translate3d(${position}px,0,0)`;
+
+            }
+
+            requestAnimationFrame(animate);
+
+        }
+
+        animate();
+
+        const desktop = window.matchMedia('(min-width:1200px)');
+
+        marquee.addEventListener('mouseenter', e => {
+
+            if (!desktop.matches) return;
+
+            const item = e.target.closest('.client-item');
+
+            if (!item) return;
+
+            paused = true;
+
+            marquee.classList.add('is-hover');
+
+            marquee.querySelectorAll('.client-item')
+                .forEach(el => el.classList.remove('active'));
+
+            item.classList.add('active');
+
+        }, true);
+
+        marquee.addEventListener('mouseleave', e => {
+
+            if (!desktop.matches) return;
+
+            const item = e.target.closest('.client-item');
+
+            if (!item) return;
+
+            paused = false;
+
+            marquee.classList.remove('is-hover');
+
+            item.classList.remove('active');
+
+        }, true);
 
     }
 
@@ -268,8 +343,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //////////////////////////////////////////////////////////////////
     // [ Init All ]
 
+    initMobSubmenu();
     initBackToTop();
     initSwipers();
+    initClientsMarquee();
     initMasks();
     initFancybox();
 

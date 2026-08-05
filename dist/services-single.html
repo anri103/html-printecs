@@ -40,7 +40,7 @@
                         <path d="M7.99998 8.95321C9.14874 8.95321 10.08 8.02197 10.08 6.87321C10.08 5.72446 9.14874 4.79321 7.99998 4.79321C6.85123 4.79321 5.91998 5.72446 5.91998 6.87321C5.91998 8.02197 6.85123 8.95321 7.99998 8.95321Z" stroke="#FFFFFF" stroke-width="1.5"/>
                         <path d="M2.41336 5.65992C3.7267 -0.113413 12.28 -0.106746 13.5867 5.66659C14.3534 9.05325 12.2467 11.9199 10.4 13.6933C9.06003 14.9866 6.94003 14.9866 5.59336 13.6933C3.75336 11.9199 1.6467 9.04659 2.41336 5.65992Z" stroke="#FFFFFF" stroke-width="1.5"/>
                     </svg>
-                    <a href="#">Йошкар-Ола</a>
+                    <span>Йошкар-Ола</span>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
             <div class="header-row main-row">
                 <div class="container">
                     
-                    <div class="d-flex align-items-center justify-content-between bg-light rounded p-4 w-100" style="backdrop-filter: blur(12px);">
+                    <div class="d-flex align-items-center justify-content-between bg-light rounded px-4 w-100">
 
                         <!-- logo -->
                         <div class="header-widget__logo">
@@ -75,10 +75,19 @@
                                         <span>Услуги</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="has-submenu">
                                     <a href="about.html" class="">
                                         <span>О компании</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M11.6248 14.9133C11.5081 14.8716 11.3998 14.8008 11.2998 14.7008L6.6998 10.1008C6.51647 9.91745 6.4248 9.68411 6.4248 9.40078C6.4248 9.11745 6.51647 8.88411 6.6998 8.70078C6.88314 8.51745 7.11647 8.42578 7.3998 8.42578C7.68314 8.42578 7.91647 8.51745 8.0998 8.70078L11.9998 12.6008L15.8998 8.70078C16.0831 8.51745 16.3165 8.42578 16.5998 8.42578C16.8831 8.42578 17.1165 8.51745 17.2998 8.70078C17.4831 8.88411 17.5748 9.11745 17.5748 9.40078C17.5748 9.68411 17.4831 9.91745 17.2998 10.1008L12.6998 14.7008C12.5998 14.8008 12.4915 14.8716 12.3748 14.9133C12.2581 14.9549 12.1331 14.9758 11.9998 14.9758C11.8665 14.9758 11.7415 14.9549 11.6248 14.9133Z" fill="currentColor"/>
+                                        </svg>
                                     </a>
+                                    <div class="submenu-wrap">
+                                        <ul class="submenu">
+                                            <li><a href="about.html">О нас</a></li>
+                                            <li><a href="clients.html">Клиенты и отзывы</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href="faq.html" class="">
@@ -149,7 +158,7 @@
                                 </svg>
                             </a>
                             <!-- mobile-toggler -->
-                            <button type="button" class="btn btn-icon btn-primary rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu-XXX">
+                            <button type="button" class="btn btn-icon btn-primary rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <mask id="mask0_397_1141" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                                         <rect width="24" height="24" fill="#D9D9D9"/>
@@ -192,13 +201,9 @@
     </header>
 
     <!-- offcanvas-mobilemenu -->
-    <div class="offcanvas offcanvas-mobilemenu offcanvas-top" data-bs-scroll="true" tabindex="-1" id="offcanvasMobileMenu">
+    <div class="offcanvas offcanvas-mobilemenu offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasMobileMenu">
         <div class="offcanvas-header">
-            <div class="offcanvas-mobilemenu__logo">
-                <a href="index.html">
-                    <img class="img-fluid" src="assets/img/logo/logo.svg" alt="Мобильные системы и технологии">
-                </a>
-            </div>
+            <div class="h2 fw-600 text-uppercase mb-0">Меню</div>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -207,28 +212,71 @@
                 <nav class="mobile-navigation">
                     <ul class="mobile-nav" id="mobileNav">
                         <li>
-                            <a href="#homeCategories">
-                                <span>Область применения</span>
+                            <a href="services.html" class="active">
+                                <span>Услуги</span>
+                            </a>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="about.html" class="">
+                                <span>О компании</span>
+                            </a>
+                            <button type="button" class="submenu-toggler"></button>
+                            <ul class="submenu">
+                                <li><a href="about.html">О нас</a></li>
+                                <li><a href="clients.html">Клиенты и отзывы</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="faq.html" class="">
+                                <span>Вопрос-ответ</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#homeFunctions">
-                                <span>Функции</span>
+                            <a href="blog.html" class="">
+                                <span>Блог</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#homeHowWorks">
-                                <span>Принцип работы</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#homeStructure">
-                                <span>Структура</span>
+                            <a href="contacts.html" class="">
+                                <span>Контакты</span>
                             </a>
                         </li>
                     </ul>
                 </nav>
+
+                <div class="d-flex flex-column gap-9">
+                    <div class="nav d-flex flex-column gap-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14.6466 12.2199C14.6466 12.4599 14.5933 12.7066 14.4799 12.9466C14.3666 13.1866 14.2199 13.4133 14.0266 13.6266C13.6999 13.9866 13.3399 14.2466 12.9333 14.4133C12.5333 14.5799 12.0999 14.6666 11.6333 14.6666C10.9533 14.6666 10.2266 14.5066 9.45992 14.1799C8.69325 13.8533 7.92658 13.4133 7.16658 12.8599C6.39992 12.2999 5.67325 11.6799 4.97992 10.9933C4.29325 10.2999 3.67325 9.57325 3.11992 8.81325C2.57325 8.05325 2.13325 7.29325 1.81325 6.53992C1.49325 5.77992 1.33325 5.05325 1.33325 4.35992C1.33325 3.90659 1.41325 3.47325 1.57325 3.07325C1.73325 2.66659 1.98659 2.29325 2.33992 1.95992C2.76659 1.53992 3.23325 1.33325 3.72659 1.33325C3.91325 1.33325 4.09992 1.37325 4.26659 1.45325C4.43992 1.53325 4.59325 1.65325 4.71325 1.82659L6.25992 4.00659C6.37992 4.17325 6.46658 4.32659 6.52658 4.47325C6.58658 4.61325 6.61992 4.75325 6.61992 4.87992C6.61992 5.03992 6.57325 5.19992 6.47992 5.35325C6.39325 5.50658 6.26658 5.66658 6.10658 5.82658L5.59992 6.35325C5.52658 6.42658 5.49325 6.51325 5.49325 6.61992C5.49325 6.67325 5.49992 6.71992 5.51325 6.77325C5.53325 6.82658 5.55325 6.86658 5.56659 6.90658C5.68659 7.12658 5.89325 7.41325 6.18658 7.75992C6.48658 8.10659 6.80658 8.45992 7.15325 8.81325C7.51325 9.16658 7.85992 9.49325 8.21325 9.79325C8.55992 10.0866 8.84658 10.2866 9.07325 10.4066C9.10658 10.4199 9.14658 10.4399 9.19325 10.4599C9.24658 10.4799 9.29992 10.4866 9.35992 10.4866C9.47325 10.4866 9.55992 10.4466 9.63325 10.3733L10.1399 9.87325C10.3066 9.70659 10.4666 9.57992 10.6199 9.49992C10.7733 9.40658 10.9266 9.35992 11.0933 9.35992C11.2199 9.35992 11.3533 9.38658 11.4999 9.44658C11.6466 9.50658 11.7999 9.59325 11.9666 9.70659L14.1733 11.2733C14.3466 11.3933 14.4666 11.5333 14.5399 11.6999C14.6066 11.8666 14.6466 12.0333 14.6466 12.2199Z" stroke="#141414" stroke-width="1.5" stroke-miterlimit="10"></path>
+                            </svg>
+                            <a href="tel:+78362385656" class="nav-link p-0">+7&nbsp;8362&nbsp;38-56-56</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M11.3333 13.6666H4.66665C2.66665 13.6666 1.33331 12.6666 1.33331 10.3333V5.66659C1.33331 3.33325 2.66665 2.33325 4.66665 2.33325H11.3333C13.3333 2.33325 14.6666 3.33325 14.6666 5.66659V10.3333C14.6666 12.6666 13.3333 13.6666 11.3333 13.6666Z" stroke="#141414" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M11.3334 6L9.24668 7.66667C8.56002 8.21333 7.43335 8.21333 6.74668 7.66667L4.66669 6" stroke="#141414" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <a href="mailto:info12@printecs.com" class="nav-link p-0">info12@printecs.com</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M7.99998 8.95321C9.14874 8.95321 10.08 8.02197 10.08 6.87321C10.08 5.72446 9.14874 4.79321 7.99998 4.79321C6.85123 4.79321 5.91998 5.72446 5.91998 6.87321C5.91998 8.02197 6.85123 8.95321 7.99998 8.95321Z" stroke="#141414" stroke-width="1.5"></path>
+                                <path d="M2.41336 5.65992C3.7267 -0.113413 12.28 -0.106746 13.5867 5.66659C14.3534 9.05325 12.2467 11.9199 10.4 13.6933C9.06003 14.9866 6.94003 14.9866 5.59336 13.6933C3.75336 11.9199 1.6467 9.04659 2.41336 5.65992Z" stroke="#141414" stroke-width="1.5"></path>
+                            </svg>
+                            <span>Йошкар-Ола</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column gap-4">
+                        <div class="text-body">Марий Эл, Йошкар-Ола, ул.&nbsp;Эшкинина 25</div>
+                        <div class="text-body">Работаем в&nbsp;будние дни&nbsp;с&nbsp;9:00&nbsp;до&nbsp;18:00</div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="px-7 pt-4 pb-9">
+            <a href="#" class="btn btn-primary w-100">Получить консультацию</a>
         </div>
     </div>
 

@@ -128,10 +128,105 @@
 [ section-home-clients ]*/
 
 .section-home-clients {
+    overflow: hidden;
     padding: 60px 0;
 
     @include media-breakpoint-up(xl) {
         padding: 140px 0;
+    }
+}
+
+/* clients-marquee */
+
+.clients-marquee {
+    position: relative;
+    overflow: visible;
+
+    .clients-track {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        will-change: transform;
+    }
+
+    .client-item {
+        position: relative;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0 4px;
+    }
+
+    &.is-hover .client-item {
+        opacity: .35;
+        transition: .3s;
+    }
+
+    &.is-hover .client-item.active {
+        opacity: 1;
+    }
+
+    .client-tooltip {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 18px);
+        transform: translateX(-50%) translateY(10px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        width: 370px;
+        padding: 22px 24px;
+        border-radius: var(--bs-border-radius);
+        background-color: #fff;
+        box-shadow: 4px 4px 22px 0px rgba(104, 104, 104, 0.25);
+
+        transition: .25s;
+        z-index: 20;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            transform: translateX(-50%) rotate(45deg);
+        }
+    }
+
+    .client-item.active .client-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%);
+    }
+
+    .client-img-wrap img {
+        width: auto;
+        height: 40px;
+        filter: grayscale(1) brightness(.35);
+        transition: .3s;
+    }
+
+    &.is-hover .client-item.active img {
+        filter: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .client-item {
+            padding: 0 30px;
+        }
+
+        .client-img-wrap img {
+            height: 90px;
+        }
     }
 }
 
