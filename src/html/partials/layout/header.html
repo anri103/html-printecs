@@ -59,12 +59,8 @@
                         <!-- logo -->
                         <div class="header-widget__logo">
                             <a href="index.html">
-                                @@if(transparentHeaderBar){
-                                    <img src="assets/img/logo/logo-white.svg" alt="Printecs">
-                                }
-                                @@if(!transparentHeaderBar){
-                                    <img src="assets/img/logo/logo-black.svg" alt="Printecs">
-                                }
+                                @@if(transparentHeaderBar){<img src="assets/img/logo/logo-white.svg" alt="Printecs">}
+                                @@if(!transparentHeaderBar){<img src="assets/img/logo/logo-black.svg" alt="Printecs">}
                             </a>
                         </div>
         
@@ -110,27 +106,45 @@
     
                         <!-- actions -->
                         <div class="d-flex align-items-center gap-6">
-                            <form style="width: 385px;">
-                                <div class="position-relative">
-                                    <div class="position-relative">
-                                        <!-- field -->
-                                        <input type="text" class="form-control form-control-sm px-11" placeholder="Найти услугу">
-                                        <!-- icon -->
-                                        <div class="position-absolute top-50 start-0 translate-middle-y ms-5">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <button type="submit" class="btn border-0 p-0">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        <path d="M22 22L20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </button>
+                            <div class="searchSuggest">
+                                <form>
+                                    <div class="position-relative" style="width: 385px;">
+                                        <div class="position-relative">
+                                            <!-- field -->
+                                            <input type="text" id="search" class="searchSuggestInput form-control form-control-sm px-11" placeholder="Найти услугу">
+                                            <!-- icon -->
+                                            <div class="position-absolute top-50 start-0 translate-middle-y ms-5">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button type="submit" class="btn border-0 p-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M22 22L20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
                                             </div>
+                                            <button type="button" class="searchSuggestClear btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M11.9991 13.4142L8.46357 16.9497C8.26322 17.1501 8.02752 17.2503 7.75646 17.2503C7.48541 17.2503 7.2497 17.1501 7.04936 16.9497C6.84901 16.7494 6.74884 16.5137 6.74884 16.2426C6.74884 15.9716 6.84901 15.7359 7.04936 15.5355L10.5849 12L7.04936 8.46447C6.84901 8.26412 6.74884 8.02842 6.74884 7.75736C6.74884 7.4863 6.84901 7.2506 7.04936 7.05025C7.2497 6.84991 7.48541 6.74973 7.75646 6.74973C8.02752 6.74973 8.26322 6.84991 8.46357 7.05025L11.9991 10.5858L15.5346 7.05025C15.735 6.84991 15.9707 6.74973 16.2417 6.74973C16.5128 6.74973 16.7485 6.84991 16.9489 7.05025C17.1492 7.2506 17.2494 7.4863 17.2494 7.75736C17.2494 8.02842 17.1492 8.26412 16.9489 8.46447L13.4133 12L16.9489 15.5355C17.1492 15.7359 17.2494 15.9716 17.2494 16.2426C17.2494 16.5137 17.1492 16.7494 16.9489 16.9497C16.7485 17.1501 16.5128 17.2503 16.2417 17.2503C15.9707 17.2503 15.735 17.1501 15.5346 16.9497L11.9991 13.4142Z" fill="#141414"/>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
+                                </form>
+                                <div class="searchSuggestDropdown dropdown-menu p-6 w-100">
+                                    <div class="h6 text-uppercase text-body text-opacity-60 mb-2">Услуги</div>
+                                    <div>
+                                        <a href="services-single.html" class="dropdown-item">Печать на футболках</a>
+                                        <a href="services-single.html" class="dropdown-item">Печать на одежде</a>
+                                        <a href="services-single.html" class="dropdown-item">Печать на рюкзаках</a>
+                                    </div>
+                                    <div class="mt-5">
+                                        <a href="search-result.html" class="btn btn-primary btn-sm w-100">Показать все результаты</a>
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
                             <!-- sign-btn -->
-                            <a href="#" class="btn btn-primary btn-sm">Получить консультацию</a>
+                            <a href="#modalMainAction" data-bs-toggle="modal" class="btn btn-primary btn-sm">Получить консультацию</a>
                         </div>
 
                     </div>
@@ -139,18 +153,20 @@
         </div>
 
         <!-- mobile -->
-        <div class="header-bar header__mobile bg-dark" data-device="mobile">
+        @@if(transparentHeaderBar){<div class="header-bar header__mobile bg-dark" data-device="mobile">}
+        @@if(!transparentHeaderBar){<div class="header-bar header__mobile bg-light" data-device="mobile">}
             <div class="d-flex flex-column gap-5">
                 <div class="header-row main-row">
                     <div class="container">
-        
+
                         <!-- logo -->
                         <div class="header-widget__logo">
                             <a href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="Printecs">
+                                @@if(transparentHeaderBar){<img src="assets/img/logo/logo-white.svg" alt="Printecs">}
+                                @@if(!transparentHeaderBar){<img src="assets/img/logo/logo-black.svg" alt="Printecs">}
                             </a>
                         </div>
-    
+
                         <div class="d-flex align-items-center gap-6">
                             <!-- phone -->
                             <a href="tel:+78362385656" class="btn btn-icon btn-primary rounded-circle">
@@ -170,30 +186,50 @@
                                 </svg>
                             </button>
                         </div>
-        
+
                     </div>
                 </div>
                 <div class="header-row search-row">
                     <div class="container">
-                        <form class="w-100">
-                            <div class="position-relative">
-                                <div class="position-relative">
-                                    <!-- field -->
-                                    <input type="text" class="form-control form-control-sm px-11" placeholder="Найти услугу">
-                                    <!-- icon -->
-                                    <div class="position-absolute top-50 start-0 translate-middle-y ms-5">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <button type="submit" class="btn border-0 p-0">
+                        <div class="w-100">
+                            <div class="searchSuggest">
+                                <form>
+                                    <div class="position-relative" style="width: 100%;">
+                                        <div class="position-relative">
+                                            <!-- field -->
+                                            <input type="text" class="searchSuggestInput border-1 form-control form-control-sm px-11" placeholder="Найти услугу">
+                                            <!-- icon -->
+                                            <div class="position-absolute top-50 start-0 translate-middle-y ms-5">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button type="submit" class="btn border-0 p-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M22 22L20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="searchSuggestClear btn border-0 p-0 position-absolute top-50 end-0 translate-middle-y me-5">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M22 22L20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M11.9991 13.4142L8.46357 16.9497C8.26322 17.1501 8.02752 17.2503 7.75646 17.2503C7.48541 17.2503 7.2497 17.1501 7.04936 16.9497C6.84901 16.7494 6.74884 16.5137 6.74884 16.2426C6.74884 15.9716 6.84901 15.7359 7.04936 15.5355L10.5849 12L7.04936 8.46447C6.84901 8.26412 6.74884 8.02842 6.74884 7.75736C6.74884 7.4863 6.84901 7.2506 7.04936 7.05025C7.2497 6.84991 7.48541 6.74973 7.75646 6.74973C8.02752 6.74973 8.26322 6.84991 8.46357 7.05025L11.9991 10.5858L15.5346 7.05025C15.735 6.84991 15.9707 6.74973 16.2417 6.74973C16.5128 6.74973 16.7485 6.84991 16.9489 7.05025C17.1492 7.2506 17.2494 7.4863 17.2494 7.75736C17.2494 8.02842 17.1492 8.26412 16.9489 8.46447L13.4133 12L16.9489 15.5355C17.1492 15.7359 17.2494 15.9716 17.2494 16.2426C17.2494 16.5137 17.1492 16.7494 16.9489 16.9497C16.7485 17.1501 16.5128 17.2503 16.2417 17.2503C15.9707 17.2503 15.735 17.1501 15.5346 16.9497L11.9991 13.4142Z" fill="#141414"/>
                                                 </svg>
                                             </button>
                                         </div>
                                     </div>
+                                </form>
+                                <div class="searchSuggestDropdown dropdown-menu p-6 w-100">
+                                    <div class="h6 text-uppercase text-body text-opacity-60 mb-2">Услуги</div>
+                                    <div>
+                                        <a href="services-single.html" class="dropdown-item">Печать на футболках</a>
+                                        <a href="services-single.html" class="dropdown-item">Печать на одежде</a>
+                                        <a href="services-single.html" class="dropdown-item">Печать на рюкзаках</a>
+                                    </div>
+                                    <div class="mt-5">
+                                        <a href="search-result.html" class="btn btn-primary btn-sm w-100">Показать все результаты</a>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,7 +244,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div class="d-flex flex-column justify-content-between" style="min-height: 100%; gap: 80px;">
+            <div class="d-flex flex-column justify-content-between gap-6 h-100">
                 <!-- mobile-nav -->
                 <nav class="mobile-navigation">
                     <ul class="mobile-nav" id="mobileNav">
@@ -277,6 +313,6 @@
             </div>
         </div>
         <div class="px-7 pt-4 pb-9">
-            <a href="#" class="btn btn-primary w-100">Получить консультацию</a>
+            <a href="#modalMainAction" data-bs-toggle="modal" class="btn btn-primary btn-sm w-100">Получить консультацию</a>
         </div>
     </div>

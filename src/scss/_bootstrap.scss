@@ -82,6 +82,9 @@ $container-max-widths: (
   xxl: 1720px
 );
 
+// modals
+$modal-lg: 960px;
+
 // === Core ===
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/maps";

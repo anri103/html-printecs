@@ -21,14 +21,50 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //////////////////////////////////////////////////////////////////
+    // [ Header Search Suggest ]
+
+    function initSearchSuggest() {
+        document.querySelectorAll('.searchSuggest').forEach(component => {
+
+            const input = component.querySelector('.searchSuggestInput');
+            const dropdown = component.querySelector('.searchSuggestDropdown');
+            const clearBtn = component.querySelector('.searchSuggestClear');
+
+            if (!input || !dropdown) return;
+
+            function update() {
+                const hasValue = input.value.trim().length > 0;
+
+                dropdown.classList.toggle('show', hasValue);
+
+                if (clearBtn) {
+                    clearBtn.classList.toggle('show', hasValue);
+                }
+            }
+
+            input.addEventListener('input', update);
+
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    input.value = '';
+                    update();
+                    input.focus();
+                });
+            }
+
+            update();
+        });
+    }
+
+    //////////////////////////////////////////////////////////////////
     // [ Back to Top Button ]
 
     function initBackToTop() {
-        const btn = document.querySelector('.back-to-top');
+        const btn = document.querySelector('.btn-backToTop');
         if (!btn) return;
 
         document.addEventListener('scroll', function () {
-            btn.classList.toggle('js-active', window.scrollY > 400);
+            btn.classList.toggle('show', window.scrollY > 400);
         });
 
         btn.addEventListener('click', function () {
@@ -344,6 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // [ Init All ]
 
     initMobSubmenu();
+    initSearchSuggest();
     initBackToTop();
     initSwipers();
     initClientsMarquee();

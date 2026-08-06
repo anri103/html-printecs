@@ -28,19 +28,9 @@
     border-radius: var(--bs-border-radius);
 }
 
-// input sizes
-.input-m {
-    min-height: 40px;
-    padding: 10px 16px;
-}
-.input-l {
-    min-height: 60px;
-    padding: 12px 22px;
-}
-
 // form-check
 .form-check {
-    font-size: 20px;
+    font-size: 24px;
 }
 .form-check-input {
     --bs-border-width: 2px;
@@ -57,12 +47,43 @@
     }
 
     &[type=checkbox] {
-        border-radius: 2px;
+        border-radius: 4px;
     }
 }
 .form-check-label {
     color: #767B89;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+// feedback
+.form-feedback {
+    position: absolute;
+    top: 100%;
+    display: none;
+    width: auto;
+    margin-top: .25rem;
+    font-size: .875em;
+    padding: 6px;
+    z-index: 1;
+}
+
+.feedback-error {
+    color: #b91c1c;
+    border-radius: .25rem;
+    background-color: #fef2f2;
+    box-shadow: 0px 0px 2px 0px rgba(30, 41, 59, .08), 0px 2px 4px 0px rgba(30, 41, 59, .12);
+}
+
+// searchSuggestInput
+.searchSuggestInput {
+    border-width: 2px;
+    border-color: #fff;
+
+    &:focus {
+        border-color: var(--bs-primary);
+        box-shadow: 4px 4px 20px 0px rgba(132, 117, 102, 0.2) !important;
+    }
 }
 
 @include media-breakpoint-up(xl) {
@@ -73,28 +94,10 @@
         border-radius: var(--bs-border-radius);
     }
 
-    .form-check-label {
-        font-size: 15px;
+    .form-check {
+        font-size: 28px;
     }
-}
-
-// validation
-.invalid-feedback {
-    font-size: 16px;
-}
-
-.was-validated .form-check-input.is-valid,
-.was-validated .form-check-input:valid {
-    border-color: var(--bs-border-color);
-}
-.form-check-input.is-valid:checked,
-.was-validated .form-check-input:valid:checked {
-    background-color: #415EF6;
-    border-color: #415EF6;
-    box-shadow: none;
-}
-
-.was-validated .form-check-input.is-valid~.form-check-label,
-.was-validated .form-check-input:valid~.form-check-label {
-    color: #767B89;
+    .form-check-label {
+        font-size: 20px;
+    }
 }
