@@ -250,10 +250,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 speed: 500,
                 autoHeight: true,
 
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false
-                }
+                // autoplay: {
+                //     delay: 5000,
+                //     disableOnInteraction: false
+                // }
             });
 
             swiperYears.controller.control = swiperHistory;
