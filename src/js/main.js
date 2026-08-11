@@ -3,6 +3,18 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     //////////////////////////////////////////////////////////////////
+    // [ Fixed Header ]
+
+    function initFixedHeader() {
+        const header = document.querySelector('.transparentHeaderBar');
+        if (!header) return;
+
+        window.addEventListener('scroll', function () {
+            header.classList.toggle('js-fixed', window.scrollY > 400);
+        });
+    }
+
+    //////////////////////////////////////////////////////////////////
     // [ Mobile Submenu ]
 
     function initMobSubmenu() {
@@ -347,6 +359,100 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
+    function initClientsMarqueeReverse() {
+
+        const marquee = document.querySelector('.clients-marquee-reverse');
+
+        if (!marquee) return;
+
+
+        const track = marquee.querySelector('.clients-track-reverse');
+
+        if (!track) return;
+
+
+        /*
+        * Получаем исходные логотипы
+        */
+        const items = [...track.children];
+
+
+        /*
+        * Дублируем логотипы один раз.
+        *
+        * Получается:
+        *
+        * [1][2][3][4][5] [1][2][3][4][5]
+        *
+        * Когда первая половина уезжает,
+        * возвращаем позицию в 0.
+        */
+        items.forEach(item => {
+
+            track.appendChild(
+                item.cloneNode(true)
+            );
+
+        });
+
+
+        /*
+        * Начинаем со смещения,
+        * чтобы движение вправо было бесшовным.
+        */
+        let position = -(track.scrollWidth / 2);
+
+
+        /*
+        * Скорость.
+        *
+        * Сделал немного медленнее,
+        * чем в основном marquee.
+        */
+        const speed = 0.935;
+
+
+        /*
+        * Анимация
+        */
+        function animate() {
+
+            /*
+            * Движение ВПРАВО
+            */
+            position += speed;
+
+
+            /*
+            * Ширина одной полной группы логотипов
+            */
+            const half = track.scrollWidth / 2;
+
+
+            /*
+            * Когда дошли до начала —
+            * возвращаемся на позицию второй группы.
+            */
+            if (position >= 0) {
+
+                position = -half;
+
+            }
+
+
+            track.style.transform =
+                `translate3d(${position}px, 0, 0)`;
+
+
+            requestAnimationFrame(animate);
+
+        }
+
+
+        animate();
+
+    }
+
     //////////////////////////////////////////////////////////////////
     // [ Phone & Date Masks ]
 
@@ -379,11 +485,13 @@ document.addEventListener('DOMContentLoaded', function () {
     //////////////////////////////////////////////////////////////////
     // [ Init All ]
 
+    initFixedHeader();
     initMobSubmenu();
     initSearchSuggest();
     initBackToTop();
     initSwipers();
     initClientsMarquee();
+    initClientsMarqueeReverse();
     initMasks();
     initFancybox();
 

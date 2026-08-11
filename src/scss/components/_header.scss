@@ -2,7 +2,9 @@
 [ header ]*/
 
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
     .header-row {
         display: flex;
@@ -17,9 +19,91 @@
         }
     }
 
+    &__desktop {
+        .top-row {
+            min-height: 36px;
+            background-color: $dark;
+        }
+
+        .main-row {
+            margin-top: 0.75rem;
+        }
+
+        .header-main-pill {
+            --bs-bg-opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            border-radius: var(--bs-border-radius);
+            padding: 0 0.75rem;
+            background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+            transition: 0.3s ease;
+        }
+    }
+
     &__mobile {
         padding-top: 32px;
         padding-bottom: 20px;
+        background-color: $light;
+    }
+
+    // transparentHeaderBar
+
+    &.transparentHeaderBar {
+        transition: 0.3s ease;
+
+        .header__desktop {
+            .main-row {
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: 100;
+            }
+    
+            .header-main-pill {
+                --bs-bg-opacity: 0.12;
+                background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+                backdrop-filter: blur(12px);
+            }
+    
+            .primary-nav li a {
+                color: #fff;
+    
+                &:hover,
+                &.active {
+                    color: var(--bs-primary);
+                }
+            }
+    
+            .primary-nav .submenu {
+                --bs-bg-opacity: 0.12;
+                background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+                backdrop-filter: blur(12px);
+            }
+        }
+
+        .header__mobile {
+            background-color: $dark;
+        }
+    }
+
+    &.transparentHeaderBar.js-fixed {
+        transition: 0.3s ease;
+        
+        .header__desktop {
+            .header-main-pill {
+                --bs-bg-opacity: 1;
+                background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+                backdrop-filter: none;
+            }
+
+            .primary-nav .submenu {
+                --bs-bg-opacity: 1;
+                background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+                backdrop-filter: none;
+            }
+        }
     }
 
     // Максимальная ширина
@@ -238,30 +322,6 @@
         }
     }
 
-}
-
-/* transparentHeaderBar */
-
-.transparentHeaderBar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 100;
-
-    .primary-nav li a {
-        color: #fff;
-
-        &:hover,
-        &.active {
-            color: var(--bs-primary);
-        }
-    }
-
-    .primary-nav .submenu {
-        --bs-bg-opacity: 0.12;
-        background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
-        backdrop-filter: blur(12px);
-    }
 }
 
 /* searchSuggest */

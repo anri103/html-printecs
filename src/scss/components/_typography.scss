@@ -52,3 +52,11 @@ h1, h2, h3, h4, h5, h6,
     word-break: break-all;
     min-width: 0;
 }
+.text-line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+    min-width: 0;
+}
