@@ -48,6 +48,8 @@
 /* swiperFeatures */
 
 .swiperFeatures {
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-opacity: 1;
     border-radius: var(--bs-border-radius-sm);
 
     .swiper-slide {
@@ -96,6 +98,17 @@
 
     @include media-breakpoint-up(xl) {
         border-radius: var(--bs-border-radius);
+    }
+}
+
+.swiperBlog-area {
+
+    @include media-breakpoint-up(xl) {
+        .btn-swiper-prev,
+        .btn-swiper-next {
+            top: calc(440px / 2 - 80px / 2);
+            transform: none;
+        }
     }
 }
 

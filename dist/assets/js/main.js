@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     nextEl: '.swiperFeatures-area .btn-swiper-next',
                     prevEl: '.swiperFeatures-area .btn-swiper-prev',
                 },
-                pagination: { el: '.swiper-pagination', clickable: true },
+                pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, dynamicMainBullets: 3, },
                 breakpoints: {
                     768: { slidesPerView: 2 },
                     992: { slidesPerView: 3 },
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     nextEl: '.swiperTeam-area .btn-swiper-next',
                     prevEl: '.swiperTeam-area .btn-swiper-prev',
                 },
-                pagination: { el: '.swiper-pagination', clickable: true },
+                pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, dynamicMainBullets: 3, },
                 breakpoints: {
                     768: { slidesPerView: 2 },
                     992: { slidesPerView: 3 },
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     nextEl: '.swiperGallery-area .btn-swiper-next',
                     prevEl: '.swiperGallery-area .btn-swiper-prev',
                 },
-                pagination: { el: '.swiper-pagination', clickable: true },
+                pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, dynamicMainBullets: 3, },
                 breakpoints: {
                     768: { slidesPerView: 2 },
                     992: { slidesPerView: 3 },
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     nextEl: '.swiperBlog-area .btn-swiper-next',
                     prevEl: '.swiperBlog-area .btn-swiper-prev',
                 },
-                pagination: { el: '.swiper-pagination', clickable: true },
+                pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, dynamicMainBullets: 3, },
                 breakpoints: {
                     768: { slidesPerView: 2 },
                     992: { slidesPerView: 3 },
