@@ -195,3 +195,27 @@
         }
     }
 }
+
+.swiperYears-area {
+    @include media-breakpoint-down(xl) {
+        padding: 0 40px;
+
+        .btn-swiper-prev, .btn-swiper-next {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+
+            svg {
+                width: 18px;
+            }
+        }
+
+        .btn-swiper-prev {
+            left: 0;
+        }
+
+        .btn-swiper-next {
+            right: 0;
+        }
+    }
+}
