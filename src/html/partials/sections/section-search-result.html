@@ -1,40 +1,49 @@
 <section class="section section-search-result">
 
-    <div class="section__header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl">
-                    <div class="d-flex flex-column gap-5 gap-xl-7">
-                        <h1 class="section__title h1 fw-600 text-uppercase">Результаты поиска</h1>
+    @@if(!searchResultEmpty){
+        <div class="section__header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl">
+                        <div class="d-flex flex-column gap-5 gap-xl-7">
+                            <h1 class="section__title h1 fw-600 text-uppercase">Результаты поиска</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="section__body">
-        <div class="container">
+        <div class="section__body">
+            <div class="container">
 
-            <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-1.png",
-                    "title": "Афиши"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-2.png",
-                    "title": "Бланки"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-3.png",
-                    "title": "Визитки"
-                })
-                @@include('../cards/card-service.html', {
-                    "thumbURL": "assets/img/home/card-cat-4.png",
-                    "title": "Открытки"
-                })
+                <div class="d-grid grid-cols-2 grid-cols-xl-4 gap-5 gap-xl-9 row-gap-xl-11">
+                    @@include('../cards/card-service.html', {
+                        "thumbURL": "assets/img/home/card-cat-1.png",
+                        "title": "Афиши"
+                    })
+                    @@include('../cards/card-service.html', {
+                        "thumbURL": "assets/img/home/card-cat-2.png",
+                        "title": "Бланки"
+                    })
+                    @@include('../cards/card-service.html', {
+                        "thumbURL": "assets/img/home/card-cat-3.png",
+                        "title": "Визитки"
+                    })
+                    @@include('../cards/card-service.html', {
+                        "thumbURL": "assets/img/home/card-cat-4.png",
+                        "title": "Открытки"
+                    })
+                </div>
+
             </div>
-
         </div>
-    </div>
+    }
+    @@if(searchResultEmpty) {
+        <div class="d-flex align-items-center justify-content-between" style="padding: 165px 0 215px;">
+            <div class="container">
+                <div class="text-center fw-500 mx-auto" style="max-width: 270px; font-size: 16px;">По вашему запросу ничего не найдено</div>
+            </div>
+        </div>
+    }
 
 </section>

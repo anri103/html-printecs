@@ -354,7 +354,7 @@
     }
 }
 
-.searchSuggestDropdown {
+.searchSuggestResults {
     --bs-dropdown-item-padding-x: 0;
     --bs-dropdown-item-padding-y: 1rem;
     --bs-dropdown-border-width: 0;
@@ -362,8 +362,24 @@
     --bs-dropdown-link-hover-bg: transparent;
     --bs-dropdown-link-active-color: var(--bs-primary);
     --bs-dropdown-link-active-bg: transparent;
+    display: none;
     margin-top: 8px;
     box-shadow: 4px 4px 20px 0px rgba(132, 117, 102, 0.2);
+
+    &.show {
+        display: block;
+    }
+
+    .dropdown-item {
+        border-bottom: 1px solid rgba(20, 20, 20, 0.12);
+        font-weight: 500;
+    }
+}
+
+.searchResults {
+    --bs-dropdown-item-padding-x: 0;
+    --bs-dropdown-item-padding-y: 1rem;
+    --bs-dropdown-link-color: var(--bs-body-color);
 
     .dropdown-item {
         border-bottom: 1px solid rgba(20, 20, 20, 0.12);

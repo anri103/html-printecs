@@ -36,11 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // [ Header Search Suggest ]
 
     function initSearchSuggest() {
-        document.querySelectorAll('.searchSuggest').forEach(component => {
+	    document.querySelectorAll('.searchSuggest').forEach(component => {
 
             const input = component.querySelector('.searchSuggestInput');
-            const dropdown = component.querySelector('.searchSuggestDropdown');
+            const dropdown = component.querySelector('.searchSuggestResults');
             const clearBtn = component.querySelector('.searchSuggestClear');
+            const form = component.querySelector('form');
 
             if (!input || !dropdown) return;
 
@@ -63,6 +64,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     input.focus();
                 });
             }
+
+            // закрытие dropdown-варианта по клику вне компонента
+            // (offcanvas закрывается своим bootstrap-механизмом, поэтому ему это не мешает)
+            document.addEventListener('click', (e) => {
+                if (!component.contains(e.target)) {
+                    dropdown.classList.remove('show');
+                    clearBtn?.classList.remove('show');
+                }
+            });
+
+            // чтобы форма не улетала на перезагрузку страницы при пустом запросе
+            form?.addEventListener('submit', (e) => {
+                if (!input.value.trim()) e.preventDefault();
+            });
 
             update();
         });
